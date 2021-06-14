@@ -68,7 +68,14 @@ function RemoveColumn()
     numCols--;//column minus by 1
 }
 
-function fillUC() {
+function fillAll()
+{
+    let color = document.getElementById("colorchooser").value;//stores one color 
+    let allgrids = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = color);//takes all grids and changes color to one
+}
+
+function FillAllUncolored()
+{
     let color = document.getElementById("colorchooser").value;//takes the grid
     let table = document.querySelectorAll('td').forEach(td => {
         if(td.style.backgroundColor == "" || td.style.backgroundColor == "white")//if the box is white or empty
