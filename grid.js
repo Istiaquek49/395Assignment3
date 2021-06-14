@@ -54,3 +54,16 @@ function RemoveRow()
     thisGrid.deleteRow(numRows-1);//deletes the last row
     numRows--;
 }
+
+function RemoveColumn() 
+{
+    let thisGrid = document.getElementById("grid");//takes the grid
+    let allRows = document.querySelectorAll("tr");
+    let numberRows = 0;
+    for(let i = 0; i < numRows; i++) //removes the last column
+    {
+        allRows[numberRows].removeChild(allRows[numberRows].lastChild);
+        numberRows++;
+    }
+    numCols--;//column minus by 1
+}
