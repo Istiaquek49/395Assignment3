@@ -88,3 +88,9 @@ function FillAllUncolored()
 function Clear() {
     let clearcolor = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "");//turns all grids color blank
 }
+
+function Selected() {
+    colorSelected = document.getElementById("colorchooser").value;
+    document.getElementById("initial-box").style.backgroundColor = colorSelected;
+}
+
