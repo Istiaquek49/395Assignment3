@@ -67,3 +67,13 @@ function RemoveColumn()
     }
     numCols--;//column minus by 1
 }
+
+function fillUC() {
+    let color = document.getElementById("colorchooser").value;//takes the grid
+    let table = document.querySelectorAll('td').forEach(td => {
+        if(td.style.backgroundColor == "" || td.style.backgroundColor == "white")//if the box is white or empty
+        {
+            td.style.backgroundColor = color;//fills the all the boxes with the color
+        }
+    });
+}
