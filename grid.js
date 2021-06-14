@@ -84,3 +84,7 @@ function FillAllUncolored()
         }
     });
 }
+
+function Clear() {
+    let clearcolor = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "");//turns all grids color blank
+}
