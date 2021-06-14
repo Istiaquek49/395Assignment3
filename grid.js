@@ -30,7 +30,7 @@ function AddRow()
     numRows++;
 }
 
-function addC() 
+function AddColumn() 
 {
     let thisGrid = document.getElementById("grid");//sets up the grid in the dom
     let allRows = document.querySelectorAll("tr");
@@ -46,4 +46,11 @@ function addC()
         numberRows++;
     }
     numCols++;
+}
+
+function RemoveRow() 
+{
+    let thisGrid = document.getElementById("grid");//takes the grid
+    thisGrid.deleteRow(numRows-1);//deletes the last row
+    numRows--;
 }
